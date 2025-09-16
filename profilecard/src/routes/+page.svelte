@@ -1,42 +1,42 @@
 <script>
-
   let { data } = $props();
   const users = data.user;
-
 </script>
 
-<section>
+  <div class="card">
+   
+    <article class="front">
 
-  <article class="front">
-
-    <img src="" alt="" />
-    <h1>{users.name}</h1>
-    <p>hier komt intro</p>
-
-    <button>lees meer</button>
-
-  </article>
-
-  <article class="back">
+      <h1>{users.name}</h1>
+      <p>hier komt intro</p>
+      <button>lees meer</button>
       
-    <h2>About</h2>
-    
-    <div class="back-content">
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo assumenda natus corrupti, deserunt magni doloremque rerum. Similique, culpa rem vel ipsum est fugiat dolor officia modi, expedita, quo unde doloribus.
-      </p>
+    </article>
 
-      <div class="fav-item">
-          <h3>fav:</h3>
+ 
+    <article class="back">
+      <h2>About</h2>
+
+      <section class="back-content">
+
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+            assumenda natus corrupti, deserunt magni doloremque rerum.
+          </p>
+        </div>
+
+        <div class="fav-item">
+          <h3>Fav:</h3>
           <p>fav item</p>
-      </div>
+        </div>
 
-      <p>
-        nog iets leuks?
-      </p>
+        <div>
+          <p>Nog iets leuks?</p>
+        </div>
 
-    </div>
+      </section>
 
-  </article>
+    </article>
 
-</section>
+  </div>
