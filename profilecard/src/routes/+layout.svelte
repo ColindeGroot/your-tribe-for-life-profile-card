@@ -33,13 +33,25 @@
 
     .card {
       position: relative;
-      width: 500px;
-      height: 500px;
+      width: 320px;
+      height: 400px;
       transform-style: preserve-3d;
-      transition: transform 0.6s ease-in-out;
+      transition: transform 0.5s ease-in-out;
+
+      @media (min-width: 800px) {
+     
+        position: relative;
+        width: 700px;
+        height: 500px;
+        transform-style: preserve-3d;
+        transition: transform 0.5s ease-in-out;
+      }
     }
 
-    main:hover .card {
+    
+
+    main:hover .card,
+    main:active .card {
       transform: rotateY(180deg); /* Je kunt ook rotateX doen */
     }
 
@@ -64,15 +76,26 @@
       background: #222;
       color: #fff;
       transform: rotateY(180deg);
-      padding: 1em;
       text-align: center;
     }
 
     .back-content {
       display: flex;
       flex-direction: column;
+
+      flex: 1;
       gap: 1em;
-      width: 100%;
+      overflow-y: auto;
+
+      div {
+        height: 100%; 
+        width: 100%; 
+        flex: 0 0 100%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start;
+      }
     }
 
     .fav-item {
