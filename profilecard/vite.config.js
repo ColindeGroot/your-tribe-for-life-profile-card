@@ -4,3 +4,12 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [sveltekit()]
 });
+
+export default {
+  ssr: {
+    noExternal: ['fsevents']
+  },
+  optimizeDeps: {
+    exclude: ['fsevents']
+  }
+}
