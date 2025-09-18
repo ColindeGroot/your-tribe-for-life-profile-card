@@ -2,7 +2,7 @@ export async function load(){
     const userData = await fetch ('https://fdnd.directus.app/items/person/149')
     const userDataResponse = await userData.json()
 
-    // console.log(userDataResponse)
+    console.log(userDataResponse)
 
     return { user: userDataResponse.data}
 }

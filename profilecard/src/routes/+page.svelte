@@ -8,8 +8,7 @@
     <article class="front">
 
       <h1>{users.name}</h1>
-      <p>hier komt intro</p>
-      <button>lees meer</button>
+      <p>{users.bio}</p>
       
     </article>
 
@@ -19,20 +18,16 @@
 
       <section class="back-content">
 
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
-            <br/>
-            assumenda natus corrupti, deserunt magni doloremque rerum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptatibus veniam quae perspiciatis at voluptatem eligendi aliquam consequuntur temporibus voluptate, consectetur rem perferendis amet nemo culpa fugit nostrum. Incidunt, facere?
-          </p>
+        <div snap-item>
+          <p>{users.custom}</p>
         </div>
 
-        <div class="fav-item">
+        <div class="fav-item snap-item">
           <h3>Fav:</h3>
           <p>fav item</p>
         </div>
 
-        <div>
+        <div class="snap-item">
           <p>Nog iets leuks?</p>
         </div>
 

@@ -13,15 +13,43 @@
   <link rel="icon" href={favicon} />
 
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+    body {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
+      padding: 0;
+
+      box-sizing: border-box;
+
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: #08d9d6;
+      margin:0;
+    }
+
+    h1{
+      font-size:2.5em;
+    }
+
+    h2{
+      font-size:1.8em;
+      margin:1em;
+    }
+
+    h3{
+      font-size:1.5em;
     }
 
     main {
@@ -29,6 +57,9 @@
       perspective: 1000px;
       margin: auto;
       width: fit-content;
+
+      color: #fff;
+      font-weight: medium;
     }
 
     .card {
@@ -37,70 +68,74 @@
       height: 400px;
       transform-style: preserve-3d;
       transition: transform 0.5s ease-in-out;
+    }
 
-      @media (min-width: 800px) {
-     
-        position: relative;
+    @media (min-width: 800px) {
+      .card {
         width: 700px;
         height: 500px;
-        transform-style: preserve-3d;
-        transition: transform 0.5s ease-in-out;
       }
     }
 
-    
-
     main:hover .card,
     main:active .card {
-      transform: rotateY(180deg); /* Je kunt ook rotateX doen */
+      transform: rotateY(180deg);
     }
 
     .front,
     .back {
       background: linear-gradient(145deg, #393e46 0%, #000 100%);
-      color: #08d9d6;
-
       position: absolute;
       width: 100%;
       height: 100%;
       backface-visibility: hidden;
+
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       border-radius: 10px;
       overflow: hidden;
     }
 
+    .front{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     .back {
-      background: #222;
+      align-items: start;
+
       color: #fff;
       transform: rotateY(180deg);
       text-align: center;
+      padding: 1rem;
+      gap: 1rem;
+      display: flex;
+      flex-direction: column;
     }
 
     .back-content {
       display: flex;
       flex-direction: column;
-
       flex: 1;
       gap: 1em;
-      overflow-y: auto;
+      height: 100%;
 
-      div {
-        height: 100%; 
-        width: 100%; 
-        flex: 0 0 100%; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        scroll-snap-align: start;
-      }
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+
+      scrollbar-color: #08d9d6 transparent;
+      scrollbar-width: thin;
     }
 
-    .fav-item {
-      border-top: 1px solid #444;
-      padding-top: 0.5em;
+    .back-content > div {
+      flex: 0 0 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      scroll-snap-align: start;
     }
   </style>
 </svelte:head>
