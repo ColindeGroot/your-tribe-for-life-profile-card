@@ -52,8 +52,11 @@
       font-size:1.5em;
     }
 
+    strong{
+      font-weight:500;
+    }
+
     main {
-      background-color: red;
       perspective: 1000px;
       margin: auto;
       width: fit-content;
@@ -61,11 +64,13 @@
       color: #fff;
       font-weight: medium;
     }
+    
 
+    /* mobile small nog fixxen!!!! */
     .card {
       position: relative;
       width: 320px;
-      height: 400px;
+      height: 70vh;
       transform-style: preserve-3d;
       transition: transform 0.5s ease-in-out;
     }
@@ -100,6 +105,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      p{
+        font-weight:500;
+      }
     }
 
     .back {
@@ -133,9 +142,38 @@
       flex: 0 0 100%;
       height: 100%;
       display: flex;
+      flex-flow:row wrap;
       justify-content: center;
       align-items: center;
       scroll-snap-align: start;
     }
+
+    .bio{
+      margin: 0 1em;
+      text-align:left;
+      font-size:1.2em;
+    }
+
+    .fav-item{
+      width:100%;
+      ul{
+        padding:0;
+        margin:0 1em;
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap:1em;
+        list-style:none;
+      
+        li{
+          
+         flex:1 1 28%;
+         border:2px solid #08d9d6;
+         border-radius:10px;
+       }
+      }
+      
+    }
+
   </style>
 </svelte:head>

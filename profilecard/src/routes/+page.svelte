@@ -9,7 +9,7 @@
     <article class="front">
 
       <h1>{users.name}</h1>
-      <p>{users.bio}</p>
+      <p>Software developer/FDND student</p>
       
     </article>
 
@@ -19,12 +19,11 @@
 
       <section class="back-content">
 
-        <div>
-          <p>{users.custom}</p>
+        <div class="bio">
+          <p>{users.bio}</p>
         </div>
 
         <div class="fav-item">
-          <h3>Fav:</h3>
           <ul>
             {#each favFilters as [content, subject]}
               {#if users[content]}
