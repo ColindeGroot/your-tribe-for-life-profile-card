@@ -1,6 +1,5 @@
 <script>
   import favicon from "$lib/assets/favicon.svg";
-  import { sortUserPlugins } from "vite";
 
   let { children } = $props();
 </script>
